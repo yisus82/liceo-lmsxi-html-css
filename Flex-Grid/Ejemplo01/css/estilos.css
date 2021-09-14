@@ -1,0 +1,188 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-areas:
+    'header'
+    'nav'
+    'main'
+    'footer';
+}
+
+header {
+  display: flex;
+  grid-area: header;
+  background-color: yellow;
+}
+
+h1 {
+  display: none;
+}
+
+#logo {
+  width: 250px;
+  margin: auto;
+}
+
+#arriba {
+  grid-area: nav;
+  background-color: magenta;
+}
+
+#arriba ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  list-style: none;
+  background-color: deepskyblue;
+}
+
+#arriba ul a {
+  text-decoration: none;
+  display: block;
+  padding: 16px;
+  color: white;
+}
+
+#arriba ul a:hover {
+  background: #1565c0;
+}
+
+main {
+  grid-area: main;
+  background-color: green;
+  display: grid;
+  grid-template-areas:
+    'fotos fotos'
+    'texto social';
+  grid-template-columns: 70% 1fr;
+  padding: 10px;
+}
+
+footer {
+  grid-area: footer;
+  background-color: orange;
+}
+
+#abajo ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  list-style: none;
+  background-color: deepskyblue;
+  padding: 0;
+}
+
+#abajo ul a {
+  text-decoration: none;
+  display: block;
+  padding: 16px;
+  color: white;
+}
+
+#abajo ul a:hover {
+  background: #1565c0;
+}
+
+.picture_panel {
+  grid-area: fotos;
+  background-color: salmon;
+  padding: 20px;
+}
+
+.picture_panel h2 {
+  text-align: center;
+}
+
+.home_icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.icon_column img {
+  width: 250px;
+  margin: 0 auto;
+  border-radius: 10%;
+}
+
+section {
+  grid-area: texto;
+  background-color: mediumslateblue;
+  padding: 20px;
+}
+
+aside {
+  grid-area: social;
+  background-color: chocolate;
+  padding: 20px;
+}
+
+@media all and (max-width: 1100px) {
+  .picture_panel {
+    min-height: 1100px;
+    width: 94vw;
+  }
+  .home_icons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .icon_column {
+    min-width: 380px;
+    margin: 20px 0;
+  }
+  main {
+    grid-template-areas:
+      'fotos'
+      'texto'
+      'social';
+  }
+  section {
+    width: 94vw;
+  }
+  aside {
+    width: 94vw;
+  }
+}
+
+@media all and (max-width: 800px) {
+  #arriba ul {
+    padding: 0;
+    justify-content: space-around;
+  }
+  #abajo ul {
+    padding: 0;
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 580px) {
+  #arriba ul {
+    flex-direction: column;
+    padding: 0;
+  }
+  #arriba ul a {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  #arriba ul li:last-of-type a {
+    border-bottom: none;
+  }
+  #abajo ul {
+    flex-direction: column;
+    padding: 0;
+  }
+  #abajo ul a {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  #abajo ul li:last-of-type a {
+    border-bottom: none;
+  }
+}
