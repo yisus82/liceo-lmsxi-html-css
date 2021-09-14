@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario 2</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Formulario estructurado</h1>
+	<form action="https://www.w3schools.com/action_page.php">
+		<fieldset>
+			<legend>Datos personales</legend>
+			<label for="nombre">Nombre</label>
+			<br>
+			<input type="text" name="nombre" id="nombre">
+			<br>
+			<label for="ape">Apellidos</label>
+			<br>
+			<input type="text" name="apellidos" id="ape">
+			<br>
+			<label for="dni">DNI</label>
+			<br>
+			<input type="text" name="dni" id="dni" pattern="[0-9]{8}[A-Z]">
+		</fieldset>
+		<fieldset>
+			<legend>Datos de conexión</legend>
+			<label for="usuario">Nombre Usuario</label>
+			<br>
+			<input type="text" name="usuario" id="usuario" required>
+			<br>
+			<label for="pass1">Contraseña</label>
+			<br>
+			<input type="password" name="pass1" id="pass1" required>
+			<br>
+			<label for="pass2">Repite la contraseña</label>
+			<br>
+			<input type="password" name="pass2" id="pass2" required>
+		</fieldset>
+		<input type="submit" value="Enviar datos">
+	</form>
+</body>
+</html>
