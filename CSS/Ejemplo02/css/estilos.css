@@ -1,0 +1,58 @@
+body {
+  font-family: Verdana, sans-serif;
+}
+
+header {
+  background-image: radial-gradient(white, black);
+  height: 100px;
+}
+
+header h1 {
+  display: none;
+}
+
+header img {
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  display: block;
+  background-color: lightgray;
+  padding: 20px;
+}
+
+#actual {
+  background-color: gray;
+}
+
+section {
+  background-color: lightgray;
+  padding: 20px 10px 10px 10px;
+}
+
+section article {
+  background-color: white;
+  padding: 20px 10px 10px 10px;
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: right;
+  padding: 20px 10px;
+  margin-top: 5px;
+}
